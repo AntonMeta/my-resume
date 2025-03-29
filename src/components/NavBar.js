@@ -84,7 +84,7 @@ export const NavBar = () => {
                 console.log("clicked");
               }}
             >
-              <span>Dark Mode</span>
+              <span>Light Mode</span>
             </button>
           </span>
         </Navbar.Collapse>
