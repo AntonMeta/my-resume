@@ -66,7 +66,7 @@ export const NavBar = () => {
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <div className="social-icon">
+            <div className="social-icon-dark" id="social-btns">
               <a
                 href="https://github.com/AntonMeta"
                 target="_blank"
@@ -75,7 +75,7 @@ export const NavBar = () => {
                 <img src={navIcon1} alt="GitHub" />
               </a>
               <a href="#">
-                <img src={navIcon2} alt="" />
+                <img src={navIcon2} alt="email" />
               </a>
             </div>
             <button
@@ -83,10 +83,13 @@ export const NavBar = () => {
               className="sun-btn"
               onClick={() => {
                 var elem = document.getElementById("dark-mode-toggle");
+                var elem2 = document.getElementById("social-btns");
                 if (darkMode) {
                   elem.className = "moon-btn";
+                  elem2.className = "social-icon-light";
                 } else {
                   elem.className = "sun-btn";
+                  elem2.className = "social-icon-dark";
                 }
                 setDarkMode(!darkMode);
                 console.log("clicked");
