@@ -168,40 +168,57 @@ span.navbar-text {
 
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
   padding: 9px 17px;
   font-size: 14px;
   margin-left: 18px;
   position: relative;
-  background-color: transparent;
   transition: 0.3 ease-in-out;
+  border: 1px solid #fff;
+  background-color: transparent;
 }
+
+.sun-btn {
+  color: #fff;
+}
+.moon-btn {
+  color: #121212;
+}
+
 .navbar-text button span {
   z-index: 1;
 }
 
 .navbar-text button::before {
   content: "";
-  width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
   top: 0;
   left: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  background-color: #fff;
 }
 
-.navbar-text button:hover {
+.sun-btn::before {
+  width: 0%;
+}
+
+.moon-btn::before {
+  width: 100%;
+}
+
+.sun-btn:hover {
   color: #121212;
 }
+.moon-btn:hover {
+  color: #fff;
+}
 
-.navbar-text button:hover::before {
-  content: "";
+.sun-btn:hover::before {
   width: 100%;
-  height: 100%;
-  position: absolute;
+}
+.moon-btn:hover::before {
+  width: 0%;
 }
 
 nav.navbar .navbar-toggler:active,
@@ -295,7 +312,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-/************ Banner Css ************/
+/* Banner Css */
 .banner {
   margin-top: 0;
   padding: 160px 0 100px 0;

@@ -7,7 +7,7 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
@@ -79,12 +79,20 @@ export const NavBar = () => {
               </a>
             </div>
             <button
-              className="vvd"
+              id="dark-mode-toggle"
+              className="sun-btn"
               onClick={() => {
+                var elem = document.getElementById("dark-mode-toggle");
+                if (darkMode) {
+                  elem.className = "moon-btn";
+                } else {
+                  elem.className = "sun-btn";
+                }
+                setDarkMode(!darkMode);
                 console.log("clicked");
               }}
             >
-              <span>Light Mode</span>
+              <span>{darkMode ? "Sun" : "Moon"} Mode</span>
             </button>
           </span>
         </Navbar.Collapse>
