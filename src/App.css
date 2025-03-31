@@ -465,14 +465,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 50%;
   margin: 0 auto 20px auto;
 }
-.skills-right-arrow {
-  position: absolute;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 50;
-  transition: 0.3s ease-in-out;
-  right: -50px;
-}
 
 .background-image-left {
   left: 0;
