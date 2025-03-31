@@ -3,11 +3,12 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
+import isDarkMode from "./isDarkMode";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(isDarkMode.value);
 
   useEffect(() => {
     const onScroll = () => {
@@ -24,6 +25,11 @@ export const NavBar = () => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+  };
+
+  const handleToggleDarkMode = () => {
+    isDarkMode.value = !darkMode;
+    setDarkMode(isDarkMode.value);
   };
 
   return (
@@ -66,7 +72,11 @@ export const NavBar = () => {
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <div className="social-icon-dark" id="social-btns">
+            <div
+              className={
+                isDarkMode.value ? "social-icon-dark" : "social-icon-light"
+              }
+            >
               <a
                 href="https://github.com/AntonMeta"
                 target="_blank"
@@ -79,23 +89,12 @@ export const NavBar = () => {
               </a>
             </div>
             <button
-              id="dark-mode-toggle"
-              className="sun-btn"
+              className={isDarkMode.value ? "sun-btn" : "moon-btn"}
               onClick={() => {
-                var elem = document.getElementById("dark-mode-toggle");
-                var elem2 = document.getElementById("social-btns");
-                if (darkMode) {
-                  elem.className = "moon-btn";
-                  elem2.className = "social-icon-light";
-                } else {
-                  elem.className = "sun-btn";
-                  elem2.className = "social-icon-dark";
-                }
-                setDarkMode(!darkMode);
-                console.log("clicked");
+                handleToggleDarkMode();
               }}
             >
-              <span>{darkMode ? "Sun" : "Moon"} Mode</span>
+              <span>{isDarkMode.value ? "Sun" : "Moon"} Mode</span>
             </button>
           </span>
         </Navbar.Collapse>

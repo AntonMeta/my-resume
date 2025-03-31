@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImgDark from "../assets/img/header-img-dark.svg";
 import headerImgLight from "../assets/img/header-img-light.svg";
+import isDarkMode from "./isDarkMode";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -15,7 +16,7 @@ export const Banner = () => {
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
-    }, 300);
+    }, delta);
 
     return () => {
       clearInterval(ticker);
@@ -45,7 +46,10 @@ export const Banner = () => {
   };
 
   return (
-    <section className="banner dark" id="home">
+    <section
+      className={isDarkMode.value ? "banner dark" : "banner light"}
+      id="home"
+    >
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -54,7 +58,7 @@ export const Banner = () => {
               {`Hi I'm Tony `} <br />
               <span className="wrap">-{text}-</span>
             </h1>
-            <p className="p-dark">
+            <p className={isDarkMode.value ? "p-dark" : "p-light"}>
               I am a passionate and motivated developer specializing in
               Flutter-based frontend development, with hands-on experience in
               Full-Stack projects. Passionate about building responsive,
@@ -64,11 +68,15 @@ export const Banner = () => {
               expanding my expertise in software development.
             </p>
             <button onClick={() => console.log("connect")}>
-              Let's Connect <ArrowRightCircle size={25} />
+              Let's Connect
+              <ArrowRightCircle size={25} />
             </button>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img src={headerImgDark} alt="Header Img" />
+            <img
+              src={isDarkMode.value ? headerImgDark : headerImgLight}
+              alt="Header Img"
+            />
           </Col>
         </Row>
       </Container>
