@@ -28,12 +28,26 @@ export const NavBar = () => {
   };
 
   const handleToggleDarkMode = () => {
+    if (!isDarkMode.value) {
+      document.body.classList.add("body-dark");
+      document.body.classList.remove("body-light");
+    } else {
+      document.body.classList.add("body-light");
+      document.body.classList.remove("body-dark");
+    }
     isDarkMode.value = !darkMode;
     setDarkMode(isDarkMode.value);
   };
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar
+      expand="lg"
+      className={
+        (scrolled ? "scrolled" : "") +
+        " " +
+        (darkMode ? "dark-nav" : "light-nav")
+      }
+    >
       <Container>
         <Navbar.Brand href="#home" onClick={() => onUpdateActiveLink("home")}>
           <img src={logo} alt="logo" />

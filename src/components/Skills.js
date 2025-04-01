@@ -2,7 +2,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import isDarkMode from "./isDarkMode";
 import { Container, Row, Col } from "react-bootstrap";
-import colorSharp from "../assets/img/color-sharp.png";
+// import colorSharpLight from "../assets/img/color-sharp-light.png";
+import colorSharpDark from "../assets/img/color-sharp-dark.png";
 import skill1 from "../assets/img/skill1.svg";
 import skill2 from "../assets/img/skill2.svg";
 import skill3 from "../assets/img/skill3.svg";
@@ -100,7 +101,10 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={colorSharp} />
+      <img
+        className="background-image-left"
+        src={isDarkMode ? colorSharpDark : null}
+      />
     </section>
   );
 };

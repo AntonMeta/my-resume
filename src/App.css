@@ -31,9 +31,15 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
   color: #fff !important;
   font-family: "Centra", sans-serif !important;
+}
+.body-dark {
+  background-color: #121212 !important;
+}
+
+.body-light {
+  background-color: #3e8bbf !important;
 }
 
 h1,
@@ -96,7 +102,7 @@ p.danger {
 /* Navbar */
 
 nav.navbar {
-  padding: 18px 0;
+  padding: 15px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -104,9 +110,18 @@ nav.navbar {
   transition: 0.32 ease-in-out;
 }
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 5px 0;
+  /* background-color: #121212; */
+}
+
+nav.navbar.scrolled.dark-nav {
   background-color: #121212;
 }
+
+nav.navbar.scrolled.light-nav {
+  background-color: #3e8bbf;
+}
+
 nav.navbar a.navbar-brand {
   width: 9%;
 }
