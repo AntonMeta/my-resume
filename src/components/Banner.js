@@ -44,7 +44,6 @@ export const Banner = () => {
       setDelta(500);
     }
   };
-
   return (
     <section
       className={isDarkMode.value ? "banner dark" : "banner light"}

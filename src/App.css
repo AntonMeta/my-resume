@@ -33,6 +33,7 @@ body {
   position: relative;
   color: #fff !important;
   font-family: "Centra", sans-serif !important;
+  background-color: #121212 !important;
 }
 .body-dark {
   background-color: #121212 !important;
@@ -449,12 +450,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0px 0 50px 0;
 }
 
-.skill-box {
-  background: #151515;
+.skill-col div {
   border-radius: 64px;
   text-align: center;
   padding: 40px 0;
   margin-top: -40px;
+}
+.skill-box-dark {
+  background: #151515;
+}
+.skill-box-light {
+  background: #a38646;
 }
 
 .skill h2 {
