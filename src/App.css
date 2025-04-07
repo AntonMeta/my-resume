@@ -450,17 +450,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0px 0 50px 0;
 }
 
-.skill-col div {
+.skill-box {
   border-radius: 64px;
   text-align: center;
   padding: 40px 0;
   margin-top: -40px;
-}
-.skill-box-dark {
   background: #151515;
-}
-.skill-box-light {
-  background: #a38646;
 }
 
 .skill h2 {

@@ -1,9 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { useState } from "react";
-// import colorSharpLight from "../assets/img/color-sharp-light.png";
-import colorSharpDark from "../assets/img/color-sharp-dark.png";
 import skill1 from "../assets/img/skill1.svg";
 import skill2 from "../assets/img/skill2.svg";
 import skill3 from "../assets/img/skill3.svg";
@@ -14,13 +11,8 @@ import skill7 from "../assets/img/skill7.svg";
 import skill8 from "../assets/img/skill8.svg";
 import skill9 from "../assets/img/skill9.svg";
 import skill10 from "../assets/img/skill10.svg";
-import isDarkMode from "./isDarkMode";
 
 export const Skills = () => {
-  const [update, setUpdate] = useState(0); // Dummy state for forcing updates
-
-  const forceUpdate = () => setUpdate((prev) => prev + 1); // Increment to trigger re-render
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -45,11 +37,7 @@ export const Skills = () => {
       <Container className="container">
         <Row>
           <Col className="skill-col">
-            <div
-              className={
-                isDarkMode.value ? "skill-box-dark" : "skill-box-light"
-              }
-            >
+            <div className={"skill-box"}>
               <h2>Technical Skills</h2>
               <p>
                 I have a strong technical skill set covering both front-end and
@@ -111,13 +99,6 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img
-        className="background-image-left"
-        src={isDarkMode.value ? colorSharpDark : null}
-        alt="background design"
-      />
-      <button onClick={forceUpdate}>Force Update</button>{" "}
-      {/* Example button to trigger re-render */}
     </section>
   );
 };
