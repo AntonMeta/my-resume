@@ -67,7 +67,7 @@ export const Banner = () => {
               expanding my expertise in software development.
             </p>
             <button onClick={() => console.log("connect")}>
-              Let's Connect
+              <a href="#connect">Let's Connect</a>
               <ArrowRightCircle size={25} />
             </button>
           </Col>

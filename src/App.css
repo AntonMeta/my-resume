@@ -62,11 +62,12 @@ ul {
   margin: 0;
   padding: 0;
   line-height: normal;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #fff !important;
 }
 
 img {
@@ -77,6 +78,9 @@ img {
 button {
   border: 0;
   background-color: transparent;
+}
+button a {
+  color: #fff !important;
 }
 
 input:focus,
