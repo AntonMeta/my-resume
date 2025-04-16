@@ -11,8 +11,10 @@ import skill7 from "../assets/img/skill7.svg";
 import skill8 from "../assets/img/skill8.svg";
 import skill9 from "../assets/img/skill9.svg";
 import skill10 from "../assets/img/skill10.svg";
+import { useDarkMode } from "./isDarkMode";
 
 export const Skills = () => {
+  const { isDarkMode } = useDarkMode();
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -37,7 +39,7 @@ export const Skills = () => {
       <Container className="container">
         <Row>
           <Col className="skill-col">
-            <div className={"skill-box"}>
+            <div className={`skill-box ${isDarkMode ? "dark" : "light"}`}>
               <h2>Technical Skills</h2>
               <p>
                 I have a strong technical skill set covering both front-end and

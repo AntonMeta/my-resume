@@ -362,10 +362,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 
-.dark {
+.banner.dark {
   background-image: url("./assets/img/banner-bg-dark.png");
 }
-.light {
+.banner.light {
   background-image: url("./assets/img/banner-bg-light.png");
 }
 
@@ -459,7 +459,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 40px 0;
   margin-top: -40px;
+}
+
+.skill-box.dark {
   background: #151515;
+}
+.skill-box.light {
+  background: #ab8924;
 }
 
 .skill h2 {
@@ -495,19 +501,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Mail Css ************/
+/* Mail Css */
 .mail {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 60px 0 200px 0;
 }
+
+.mail.dark {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+}
+
+.mail.light {
+  background: linear-gradient(90.21deg, #fbff11 -5.91%, #df9712 111.58%);
+}
+
 .mail img {
   width: 92%;
 }
+
 .mail h2 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 30px;
 }
+
 .mail form input,
 .mail form textarea {
   width: 100%;
@@ -522,22 +538,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
+
 .mail form input:focus,
 .mail form textarea:focus {
   background: rgba(255, 255, 255, 1);
   color: #121212;
 }
+
 .mail form input::placeholder,
 .mail form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
+
 .mail form input:focus::placeholder,
 .mail form textarea:focus::placeholder {
   color: #121212;
   opacity: 0.8;
 }
+
 .mail form button {
   font-weight: 700;
   color: #000;

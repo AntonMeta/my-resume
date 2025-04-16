@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImgDark from "../assets/img/header-img-dark.svg";
 import headerImgLight from "../assets/img/header-img-light.svg";
-import isDarkMode from "./isDarkMode";
+import { useDarkMode } from "./isDarkMode";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,6 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -45,10 +46,7 @@ export const Banner = () => {
     }
   };
   return (
-    <section
-      className={isDarkMode.value ? "banner dark" : "banner light"}
-      id="home"
-    >
+    <section className={isDarkMode ? "banner dark" : "banner light"} id="home">
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -57,7 +55,7 @@ export const Banner = () => {
               {`Hi I'm Tony `} <br />
               <span className="wrap">-{text}-</span>
             </h1>
-            <p className={isDarkMode.value ? "p-dark" : "p-light"}>
+            <p className={isDarkMode ? "p-dark" : "p-light"}>
               I am a passionate and motivated developer specializing in
               Flutter-based frontend development, with hands-on experience in
               Full-Stack projects. Passionate about building responsive,
@@ -73,7 +71,7 @@ export const Banner = () => {
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img
-              src={isDarkMode.value ? headerImgDark : headerImgLight}
+              src={isDarkMode ? headerImgDark : headerImgLight}
               alt="Header Img"
             />
           </Col>

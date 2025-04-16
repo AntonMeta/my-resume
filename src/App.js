@@ -4,15 +4,18 @@ import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
 import { Mail } from "./components/Mail";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { DarkModeProvider } from "./components/isDarkMode";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Banner />
-      <Skills />
-      <Mail />
-    </div>
+    <DarkModeProvider>
+      <div className="App">
+        <NavBar />
+        <Banner />
+        <Skills />
+        <Mail />
+      </div>
+    </DarkModeProvider>
   );
 }
 

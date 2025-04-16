@@ -3,12 +3,12 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
-import isDarkMode from "./isDarkMode";
+import { useDarkMode } from "./isDarkMode";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const [darkMode, setDarkMode] = useState(isDarkMode.value);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     const onScroll = () => {
@@ -28,15 +28,14 @@ export const NavBar = () => {
   };
 
   const handleToggleDarkMode = () => {
-    if (!isDarkMode.value) {
+    if (!isDarkMode) {
       document.body.classList.add("body-dark");
       document.body.classList.remove("body-light");
     } else {
       document.body.classList.add("body-light");
       document.body.classList.remove("body-dark");
     }
-    isDarkMode.value = !darkMode;
-    setDarkMode(isDarkMode.value);
+    toggleDarkMode();
   };
 
   return (
@@ -45,7 +44,7 @@ export const NavBar = () => {
       className={
         (scrolled ? "scrolled" : "") +
         " " +
-        (darkMode ? "dark-nav" : "light-nav")
+        (isDarkMode ? "dark-nav" : "light-nav")
       }
     >
       <Container>
@@ -104,9 +103,7 @@ export const NavBar = () => {
             </div>
             <button
               className={isDarkMode.value ? "sun-btn" : "moon-btn"}
-              onClick={() => {
-                handleToggleDarkMode();
-              }}
+              onClick={handleToggleDarkMode}
             >
               <span>{isDarkMode.value ? "Sun" : "Moon"} Mode</span>
             </button>

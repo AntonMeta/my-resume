@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 // import colorSharpLight from "../assets/img/color-sharp-light.png";
 import colorSharpDark from "../assets/img/color-sharp-dark.png";
-import isDarkMode from "./isDarkMode";
+import { useDarkMode } from "./isDarkMode";
 import contactImg from "../assets/img/contact-img.svg";
 
 export const Mail = () => {
+  const { isDarkMode } = useDarkMode();
   const userInitialDetails = {
     firstName: "",
     lastName: "",
@@ -45,7 +46,7 @@ export const Mail = () => {
   };
 
   return (
-    <section className="mail" id="connect">
+    <section className={`mail ${isDarkMode ? "dark" : "light"}`} id="connect">
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
