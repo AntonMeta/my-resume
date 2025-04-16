@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// import colorSharpLight from "../assets/img/color-sharp-light.png";
-import colorSharpDark from "../assets/img/color-sharp-dark.png";
 import { useDarkMode } from "./isDarkMode";
 import contactImg from "../assets/img/contact-img.svg";
 

@@ -86,9 +86,7 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div
-              className={
-                isDarkMode.value ? "social-icon-dark" : "social-icon-light"
-              }
+              className={isDarkMode ? "social-icon-dark" : "social-icon-light"}
             >
               <a
                 href="https://github.com/AntonMeta"
@@ -102,10 +100,10 @@ export const NavBar = () => {
               </a>
             </div>
             <button
-              className={isDarkMode.value ? "sun-btn" : "moon-btn"}
+              className={isDarkMode ? "sun-btn" : "moon-btn"}
               onClick={handleToggleDarkMode}
             >
-              <span>{isDarkMode.value ? "Sun" : "Moon"} Mode</span>
+              <span>{isDarkMode ? "Sun" : "Moon"} Mode</span>
             </button>
           </span>
         </Navbar.Collapse>

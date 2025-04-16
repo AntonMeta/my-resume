@@ -11,6 +11,8 @@ import skill7 from "../assets/img/skill7.svg";
 import skill8 from "../assets/img/skill8.svg";
 import skill9 from "../assets/img/skill9.svg";
 import skill10 from "../assets/img/skill10.svg";
+import colorSharpDark from "../assets/img/color-sharp-1-dark.png";
+import colorSharpLight from "../assets/img/color-sharp-1-light.png";
 import { useDarkMode } from "./isDarkMode";
 
 export const Skills = () => {
@@ -101,6 +103,11 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
+      <img
+        className="background-image-left"
+        src={isDarkMode ? colorSharpDark : colorSharpLight}
+        alt="bg-deecoration"
+      />
     </section>
   );
 };

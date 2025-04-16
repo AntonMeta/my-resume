@@ -115,8 +115,7 @@ nav.navbar {
   transition: 0.32 ease-in-out;
 }
 nav.navbar.scrolled {
-  padding: 5px 0;
-  /* background-color: #121212; */
+  padding: 15px 0;
 }
 
 nav.navbar.scrolled.dark-nav {
@@ -457,7 +456,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill-box {
   border-radius: 64px;
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 20px;
   margin-top: -40px;
 }
 
@@ -465,20 +464,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #151515;
 }
 .skill-box.light {
-  background: #ab8924;
+  background: #8896a9;
 }
 
 .skill h2 {
   font-size: 30px;
   font-weight: 700;
+  text-shadow: -0.7px -0.7px 0 #121212, 0.7px -0.7px 0 #121212,
+    -0.7px 0.7px 0 #121212, 0.7px 0.7px 0 #121212;
 }
 
-.skill p {
-  color: #b8b8b8;
+.skill-box p {
   letter-spacing: 0.8px;
   font-size: 18px;
   line-height: 1.5em;
   margin: 14px 0 75px 0;
+}
+
+.skill-box.dark p {
+  color: #b8b8b8;
+}
+.skill-box.light p {
+  color: #fff;
+  text-shadow: -0.5px -0.5px 0 #121212, 0.5px -0.5px 0 #121212,
+    -0.5px 0.5px 0 #121212, 0.5px 0.5px 0 #121212;
 }
 
 .skill-slider {
@@ -494,7 +503,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .background-image-left {
   left: 0;
-  top: 65%;
+  top: 40%;
   position: absolute;
   bottom: 0;
   width: 40%;
@@ -503,7 +512,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Mail Css */
 .mail {
-  padding: 60px 0 200px 0;
+  padding: 60px 0 120px 0;
 }
 
 .mail.dark {
