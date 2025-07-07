@@ -389,12 +389,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1;
   margin-bottom: 20px;
   display: block;
-  text-shadow: -1px -1px 0 #121212, 1px -1px 0 #121212, -1px 1px 0 #121212,
+  text-shadow:
+    -1px -1px 0 #121212,
+    1px -1px 0 #121212,
+    -1px 1px 0 #121212,
     1px 1px 0 #121212;
 }
 .p-light {
   color: #fff;
-  text-shadow: -1px -1px 0 #121212, 1px -1px 0 #121212, -1px 1px 0 #121212,
+  text-shadow:
+    -1px -1px 0 #121212,
+    1px -1px 0 #121212,
+    -1px 1px 0 #121212,
     1px 1px 0 #121212;
 }
 .p-dark {
@@ -446,7 +452,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Skills */
 
 #skills {
-  scroll-margin-top: 50px;
+  scroll-margin-top: 120px;
 }
 
 .skill {
@@ -470,8 +476,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill h2 {
   font-size: 30px;
   font-weight: 700;
-  text-shadow: -0.7px -0.7px 0 #121212, 0.7px -0.7px 0 #121212,
-    -0.7px 0.7px 0 #121212, 0.7px 0.7px 0 #121212;
+  text-shadow:
+    -0.7px -0.7px 0 #121212,
+    0.7px -0.7px 0 #121212,
+    -0.7px 0.7px 0 #121212,
+    0.7px 0.7px 0 #121212;
 }
 
 .skill-box p {
@@ -486,8 +495,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill-box.light p {
   color: #fff;
-  text-shadow: -0.5px -0.5px 0 #121212, 0.5px -0.5px 0 #121212,
-    -0.5px 0.5px 0 #121212, 0.5px 0.5px 0 #121212;
+  text-shadow:
+    -0.5px -0.5px 0 #121212,
+    0.5px -0.5px 0 #121212,
+    -0.5px 0.5px 0 #121212,
+    0.5px 0.5px 0 #121212;
 }
 
 .skill-slider {
@@ -503,7 +515,121 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .background-image-left {
   left: 0;
-  top: 40%;
+  top: 30%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
+/* Projects Css */
+
+.project {
+  padding: 80px 0;
+  position: relative;
+}
+
+.project h2 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow:
+    -0.7px -0.7px 0 #121212,
+    0.7px -0.7px 0 #121212,
+    -0.7px 0.7px 0 #121212,
+    0.7px 0.7px 0 #121212;
+}
+.project p {
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 85%;
+}
+.project.dark p {
+  color: #b8b8b8;
+}
+.project.light p {
+  color: #fff;
+  text-shadow:
+    -0.5px -0.5px 0 #121212,
+    0.5px -0.5px 0 #121212,
+    -0.5px 0.5px 0 #121212,
+    0.5px 0.5px 0 #121212;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.project-card.dark::before {
+  opacity: 0.85;
+}
+.project-card.light::before {
+  opacity: 0.9;
+}
+.project-card.dark::before {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+}
+.project-card.light::before {
+  background: linear-gradient(90.21deg, #fbff11 -5.91%, #df9712 111.58%);
+}
+
+.project-card:hover::before {
+  height: 100%;
+}
+.project-card:hover .project-info {
+  top: 50%;
+  opacity: 1;
+}
+.project-info {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 85%;
+}
+.project-info h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  line-height: 1.1em;
+}
+.project-card.dark .project-info h4 {
+  color: #fff;
+}
+.project-card.light .project-info h4 {
+  color: #3e8bbf;
+}
+
+.project-info span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+.project-card.dark .project-info span {
+  color: #fff;
+}
+.project-card.light .project-info span {
+  color: #3e8bbf;
+}
+.background-image-right {
+  right: 0;
+  top: 30%;
   position: absolute;
   bottom: 0;
   width: 40%;
@@ -532,20 +658,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   margin-bottom: 30px;
 }
+.mail.dark h2 {
+  color: #fff;
+}
+.mail.light h2 {
+  color: #3e8bbf;
+}
 
 .mail form input,
 .mail form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  color: #fff;
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
+}
+.mail.dark form input,
+.mail.dark form textarea {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.mail.light form input,
+.mail.light form textarea {
+  color: #3e8bbf;
+  border: 1px solid rgba(62, 139, 191, 0.5);
 }
 
 .mail form input:focus,
@@ -558,7 +698,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .mail form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
+}
+.mail.dark form input::placeholder,
+.mail.dark form textarea::placeholder {
   color: #fff;
+}
+
+.mail.light form input::placeholder,
+.mail.light form textarea::placeholder {
+  color: #3e8bbf;
 }
 
 .mail form input:focus::placeholder,
@@ -569,7 +717,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .mail form button {
   font-weight: 700;
-  color: #000;
   background-color: #fff;
   padding: 14px 48px;
   font-size: 18px;
@@ -577,6 +724,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 0;
   position: relative;
   transition: 0.3s ease-in-out;
+}
+.mail.dark form button {
+  color: #121212;
+}
+.mail.light form button {
+  color: #3e8bbf;
 }
 .mail form button span {
   z-index: 1;
@@ -587,7 +740,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .mail form button::before {
   content: "";
-  background: #121212;
   width: 0;
   height: 100%;
   position: absolute;
@@ -596,6 +748,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
   transition: 0.3s ease-in-out;
 }
+.mail.dark form button::before {
+  background: #121212;
+}
+.mail.light form button::before {
+  background: #3e8bbf;
+}
+
 .mail form button:hover::before {
   width: 100%;
 }

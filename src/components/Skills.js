@@ -11,6 +11,10 @@ import skill7 from "../assets/img/skill7.svg";
 import skill8 from "../assets/img/skill8.svg";
 import skill9 from "../assets/img/skill9.svg";
 import skill10 from "../assets/img/skill10.svg";
+import skill11 from "../assets/img/skill11.svg";
+import skill12 from "../assets/img/skill12.svg";
+import skill13 from "../assets/img/skill13.svg";
+import skill14 from "../assets/img/skill14.svg";
 import colorSharpDark from "../assets/img/color-sharp-1-dark.png";
 import colorSharpLight from "../assets/img/color-sharp-1-light.png";
 import { useDarkMode } from "./isDarkMode";
@@ -45,10 +49,11 @@ export const Skills = () => {
               <h2>Technical Skills</h2>
               <p>
                 I have a strong technical skill set covering both front-end and
-                back-end development, with expertise in languages like Python,
-                Go, C++, and JavaScript. Additionally, I am proficient in
-                frameworks such as React and Flutter, database management with
-                MySQL, and DevOps practices including CI/CD, Git, and CLI tools.
+                back-end development, with expertise in languages like
+                JavaScript, Dart, Python, Go, Java and C++. Additionally, I am
+                proficient in frameworks such as React, React Native, Flutter
+                and Express, database management with MySQL and PostgreSQL, and
+                DevOps practices including CI/CD, Git, and CLI tools.
               </p>
               <Carousel
                 arrows={false}
@@ -59,32 +64,48 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={skill1} alt="Flutter" />
-                  <h5>Flutter</h5>
+                  <img src={skill5} alt="JavaScript" />
+                  <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={skill2} alt="Go" />
-                  <h5>Go</h5>
+                  <img src={skill11} alt="Dart" />
+                  <h5>Dart</h5>
                 </div>
                 <div className="item">
                   <img src={skill3} alt="Python" />
                   <h5>Python</h5>
                 </div>
                 <div className="item">
-                  <img src={skill4} alt="C++" />
-                  <h5>C++</h5>
+                  <img src={skill2} alt="Go" />
+                  <h5>Go</h5>
                 </div>
                 <div className="item">
-                  <img src={skill5} alt="JavaScript" />
-                  <h5>JavaScript</h5>
+                  <img src={skill12} alt="Java" />
+                  <h5>Java</h5>
+                </div>
+                <div className="item">
+                  <img src={skill4} alt="C++" />
+                  <h5>C++</h5>
                 </div>
                 <div className="item">
                   <img src={skill6} alt="React" />
                   <h5>React</h5>
                 </div>
                 <div className="item">
+                  <img src={skill1} alt="Flutter" />
+                  <h5>Flutter</h5>
+                </div>
+                <div className="item">
+                  <img src={skill13} alt="Express" />
+                  <h5>Express</h5>
+                </div>
+                <div className="item">
                   <img src={skill7} alt="MySQL" />
                   <h5>MySQL</h5>
+                </div>
+                <div className="item">
+                  <img src={skill14} alt="PostrgreSQL" />
+                  <h5>PostgreSQL</h5>
                 </div>
                 <div className="item">
                   <img src={skill8} alt="CI/CD" />

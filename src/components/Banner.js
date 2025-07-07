@@ -56,13 +56,11 @@ export const Banner = () => {
               <span className="wrap">-{text}-</span>
             </h1>
             <p className={isDarkMode ? "p-dark" : "p-light"}>
-              I am a passionate and motivated developer specializing in
-              Flutter-based frontend development, with hands-on experience in
-              Full-Stack projects. Passionate about building responsive,
-              user-friendly applications and solving real-world problems through
-              clean and efficient code. Eager to contribute my cross-platform
-              and backend skills to a collaborative team while continuously
-              expanding my expertise in software development.
+              I am a passionate full-stack developer with a focus on
+              cross-platform apps using Flutter and React. Experienced in
+              building performant, user-friendly applications backed by robust
+              backend services. Strong collaborator with a creative edge honed
+              through competitive ballroom dancing and cello.
             </p>
             <button onClick={() => console.log("connect")}>
               <a href="#connect">Let's Connect</a>
